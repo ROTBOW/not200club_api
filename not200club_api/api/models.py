@@ -12,13 +12,6 @@ class Task(models.Model):
     bad_url = models.BooleanField(default=False)
     time_to_respond = models.DurationField(default=timedelta(seconds=600))
     timeout_res = models.BooleanField(default=False)
-    no_link = models.BooleanField(default=False)
     
     def __str__(self) -> str:
         return str((self.task_id, self.task_finished))
-    
-class TaskThread(models.Model):
-    thread_id = models.CharField(max_length=255, default='')
-    
-    def __str__(self) -> str:
-        return self.thread_id
