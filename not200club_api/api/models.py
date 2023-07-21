@@ -4,6 +4,7 @@ from datetime import timedelta
 # Create your models here.
 class Task(models.Model):
     task_id = models.CharField(max_length=255, blank=False, null=False)
+    task_url = models.URLField(max_length=2000, blank=False, null=False, default='no-url')
     timestamp = models.DateTimeField(auto_now_add=True)
     task_finished = models.BooleanField(default=False)
     
@@ -14,7 +15,7 @@ class Task(models.Model):
     no_link = models.BooleanField(default=False)
     
     def __str__(self) -> str:
-        return (self.task_id, self.task_finished)
+        return str((self.task_id, self.task_finished))
     
 class TaskThread(models.Model):
     thread_id = models.CharField(max_length=255, default='')
