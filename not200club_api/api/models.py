@@ -7,6 +7,7 @@ class Task(models.Model):
     task_url = models.URLField(max_length=2000, blank=False, null=False, default='no-url')
     timestamp = models.DateTimeField(auto_now_add=True)
     task_finished = models.BooleanField(default=False)
+    task_reserved = models.BooleanField(default=False)
     
     status_code = models.CharField(max_length=255, default='418')
     bad_url = models.BooleanField(default=False)
