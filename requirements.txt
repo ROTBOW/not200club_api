@@ -6,6 +6,7 @@ dj-database-url==2.0.0
 django==4.2.4
 django-cors-headers==4.2.0
 idna==3.4; python_version >= '3.5'
+psycopg2==2.9.6
 requests==2.31.0
 sqlparse==0.4.4; python_version >= '3.5'
 typing-extensions==4.7.1; python_version >= '3.7'
