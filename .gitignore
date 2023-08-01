@@ -3,3 +3,4 @@
 .venv
 *.sqlite3
 not200club_api/db.sqlite3
+notes.md
